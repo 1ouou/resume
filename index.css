@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.container {
+	position: relative;
+	margin: 50px auto;
+	width: 800px;
+	border-radius: 20px;
+	box-shadow: 0 0 5px teal;
+	background-color: #fff;
+	padding: 50px;
+}
+.container::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, #22d3ee, #0ea5e9);
+	box-shadow: 0 0 5px teal;
+	transform: rotate(-3deg);
+	border-radius: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+/* 个人信息 */
+.head {
+	display: flex;
+	letter-spacing: 0.1em;
+}
+.head-left {
+	flex: 1 0 auto;
+	display: grid;
+	grid-template-columns: 30px 300px 40px 100px;
+	grid-template-rows: repeat(4, 1fr);
+	align-items: center;
+	/* line-height: 1.5; */
+}
+.head-left .name {
+	grid-area: 1/1/2/5;
+}
+.head img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: black;
+	object-fit: cover;
+}
+.suojin {
+	text-indent: -2em;
+}
+.head-left .name {
+	font-size: 16x;
+	font-weight: bold;
+}
+.head-left .name span {
+	font-size: 26px;
+	margin-right: 15px;
+}
+.head-left .iconfont,
+.head-left .proto {
+	color: #888;
+}
+.head-left .link {
+	color: #0ea5e9;
+}
+
+/* 教育经历 */
+.block {
+	margin-top: 30px;
+}
+.block h3 {
+	position: relative;
+	font-size: 20px;
+	padding: 10px 0;
+}
+.block h3::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #888;
+	position: absolute;
+	bottom: 0;
+}
+.block .content {
+	margin-top: 10px;
+	padding: 30px 0 50px 0;
+	width: 100%;
+	border-left: 2px solid #22d3ee;
+	color: #888;
+}
+.block .content .item {
+	position: relative;
+	margin: 0 0 20px 20px;
+}
+.block .content .item h4 {
+	font-size: 16px;
+	margin-bottom: 10px;
+	letter-spacing: 0.1em;
+}
+.block .content .item::before {
+	content: " ";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: #0ea5e9;
+	border-radius: 50%;
+	position: absolute;
+	left: -28px;
+	top: 0;
+	transform: translateY(2px);
+}
+.block .content .item span {
+	color: black;
+}
+
+/* 专业技能 */
+.block .circle {
+	margin: 15px 0 45px 0;
+	display: grid;
+	grid-template-columns: repeat(3, 33.3%);
+	grid-template-rows: repeat(2, 50%);
+	justify-items: center;
+	align-items: center;
+	row-gap: 30px;
+}
+.block .circle div {
+	text-align: center;
+	line-height: 130px;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 5px solid #0ea5e9;
+	transform: rotate(45deg);
+}
+.block .circle div:nth-child(2) {
+	border-color: #0ea5e9 #0ea5e9 #c3f1f8 #c3f1f8;
+}
+.block .circle div:nth-child(3) {
+	border-color: #0ea5e9 #0ea5e9 #0ea5e9 #c3f1f8;
+}
+.block .circle div span {
+	user-select: none;
+	display: block;
+	transform: rotate(-45deg);
+}
+
+/* 项目经验 */
+.object {
+	margin: 15px 0 30px 0;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(5, auto);
+	gap: 15px 10px;
+	letter-spacing: 0.1em;
+}
+.object .title {
+	font-size: 16px;
+	font-weight: bold;
+	grid-area: 1/1/2/3;
+}
+.object span {
+	text-align: right;
+	color: #888;
+}
+.object a {
+	color: #0ea5e9;
+}
+
+.object i {
+	font-style: normal;
+	font-weight: 700;
+}
+.object p {
+	margin-bottom: 15px;
+}
+/* 个人评价 */
+.evaluate {
+	margin: 20px 0 20px 0;
+	letter-spacing: 0.1em;
+}
